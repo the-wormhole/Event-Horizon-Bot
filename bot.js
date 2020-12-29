@@ -36,7 +36,11 @@ client.on('message',function(msg){
             //if we wish to tag the person and reply
             // msg.reply('Namastey!!');
 
+            //if we wish to leave user untagged    
             msg.channel.send(replies[index]);
+        }
+        else if(msg.content === '!gif'){
+            console.log('!gif entered');
         }
 
     //}
