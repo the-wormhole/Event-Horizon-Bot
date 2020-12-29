@@ -2,7 +2,7 @@ console.log("Welcome to the singularity!!!😎 ")
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const env = require('./config/environment');
+const env = require('./config/.env');
 
 //temporarily here :) 
 client.login(process.env.TOKEN);
