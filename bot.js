@@ -2,9 +2,10 @@ console.log("Welcome to the singularity!!!😎 ")
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const env = require('./config/environment');
 
 //temporarily here :) 
-client.login('NzkwOTE2NjcwMDcxNTA0OTE2.X-HkjA.HF_BoP41BNzUVueVQGJZ0zgJKNk');
+client.login(process.env.TOKEN);
 
 client.on('ready',function(){
     console.log("let's go!!");
