@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const env = require('./config/environment.js');
 
 //temporarily here :) 
-client.login(process.env.development.token);
+client.login(env.token);
 
 client.on('ready',function(){
     console.log("let's go!!");
