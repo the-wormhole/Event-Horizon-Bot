@@ -75,11 +75,12 @@ client.on('message',async function(msg){
                msg.channel.send(data)
             }
         }*/
-        let url = `https://api.tenor.com/v1/search?q=space&key=${env.gif_api_key}&limit=1`;
+        let url = `https://api.tenor.com/v1/search?q=space&key=${env.gif_api_key}&limit=50`;
         let response = await fetch(url);
         let json = await response.json();
         console.log(json);
-        msg.channel.send(json.results[0].url);
+        const index = Math.floor(Math.random() * json.results.length);
+        msg.channel.send(json.results[index].url);
     }
     
    //msg.reply('Namastey!!!! 🙏 ');
