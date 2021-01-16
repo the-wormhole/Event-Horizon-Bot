@@ -12,10 +12,14 @@ console.log(msg.content);
 if(msg.content === 'hi' || msg.content === 'hey' || msg.content === 'hello' || msg.content === 'Hey' || msg.content === 'Hi' || msg.content === 'Hello'){
     commands['hello'](msg);
 }
-else if(msg.content === '!space'){
-    commands['space'](msg);
-}
 
+
+const token = msg.content;
+if(token.charAt(0) === "!"){
+let command = token.split("!");
+command.shift();
+commands[command](msg);
+}
 //msg.reply('Namastey!!!! 🙏 ');
 
 
