@@ -16,7 +16,7 @@ module.exports = async function(msg, str){
     
         msg.channel.send(json.date);
         msg.channel.send(json.url);
-        msg.channel.send(json.title);
+        msg.channel.send(`***${json.title}***`);
         msg.channel.send(json.explanation);
     }
     catch(err){
