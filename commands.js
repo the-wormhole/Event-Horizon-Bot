@@ -1,7 +1,8 @@
 const hello = require('./commands/hello');
 const space = require('./commands/space');
+const apod = require('./commands/apod');
 
-const commands = { hello , space};          // enhanced javascript object form
+const commands = { hello , space , apod};          // enhanced javascript object form
 
 module.exports = async function(msg){
 
@@ -16,9 +17,10 @@ if(msg.content === 'hi' || msg.content === 'hey' || msg.content === 'hello' || m
 
 const token = msg.content;
 if(token.charAt(0) === "!"){
-let command = token.split("!");
-command.shift();
-commands[command](msg);
+const command = token.split("!"); 
+command.shift();                        // exclamation removed 
+let call = command[0].split(" ");       // the query after command seperated
+commands[call[0]](msg,call[1]);
 }
 //msg.reply('Namastey!!!! 🙏 ');
 

@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const env = require('../config/environment.js');
 
 
-module.exports = async function(msg){
+module.exports = async function(msg,str){
 console.log('!space entered');
 /* $.ajax({
 url: `https://api.tenor.com/v1/search?q=space&key=${env.gif_api_key}&contentfilter=off&limit=1`,
