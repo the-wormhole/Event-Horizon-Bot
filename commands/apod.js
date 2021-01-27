@@ -1,5 +1,5 @@
 const fetch = require("node-fetch");
-const env = require("../config/environment");
+//const env = require("../config/environment");
 
 function isEmpty(str) {
     return (!str || 0 === str.length);

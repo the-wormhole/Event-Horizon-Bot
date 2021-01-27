@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const env = require('../config/environment.js');
+//const env = require('../config/environment.js');
 
 
 module.exports = async function(msg,str){

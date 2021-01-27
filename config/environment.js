@@ -1,10 +1,10 @@
 
 
 const development = {
-    token :'NzkwOTE2NjcwMDcxNTA0OTE2.X-HkjA.f26VOThxIt6zrMe5VSQmcqJQwKk',
-    client_id:'790916670071504916',
-    gif_api_key: '9NUZAOBMGB65',
-    nasa_key: 'r5uDKOy5J2Fjc3dyeMHmGNztqAkw2CYmTi6j8nCr'
+    token :process.env.TOKEN_DISCORD,
+    client_id:process.env.CLIENT_ID_DISCORD,
+    gif_api_key: process.env.GIF_API_KEY,
+    nasa_key: process.env.NASA_KEY
 }
 
 module.exports = development;
