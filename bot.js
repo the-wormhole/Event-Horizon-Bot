@@ -5,8 +5,9 @@ const client = new Discord.Client();
 const env = require('./config/environment.js');
 require('dotenv').config();
 
+//console.log(process.env);
 //temporarily here :) 
-client.login(env.token);
+client.login(process.env.TOKEN_DISCORD);
 
 client.on('ready',function(){
     console.log("let's go!!");

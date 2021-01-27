@@ -37,7 +37,7 @@ console.log(xmlhttp.responseText);
 msg.channel.send(data)
 }
 }*/
-let url = `https://api.tenor.com/v1/search?q=space&key=${env.gif_api_key}&limit=50`;
+let url = `https://api.tenor.com/v1/search?q=space&key=${process.env.GIF_API_KEY}&limit=50`;
 let response = await fetch(url);
 let json = await response.json();
 console.log(json);
