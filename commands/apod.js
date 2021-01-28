@@ -7,7 +7,7 @@ function isEmpty(str) {
 
 module.exports = async function(msg, str){
     console.log("*********!apod entered*********");
-    let url = (false === isEmpty(str))?`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_KEY}&date=${str}` : `https://api.nasa.gov/planetary/apod?api_key=${env.nasa_key}`;
+    let url = (false === isEmpty(str))?`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_KEY}&date=${str}` : `https://api.nasa.gov/planetary/apod?api_key=${process.env.nasa_key}`;
     try{
 
     let response = await fetch(url);
