@@ -13,7 +13,8 @@ module.exports = async function(msg, str){
     let response = await fetch(url);
     let json = await response.json();
     console.log(str);
-    
+        
+        console.log("The url: ", url);
         msg.channel.send(json.date);
         msg.channel.send(json.url);
         msg.channel.send(`***${json.title}***`);
